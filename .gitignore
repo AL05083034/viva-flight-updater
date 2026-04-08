@@ -1,0 +1,12 @@
+# Ocultar variables de entorno y credenciales
+.env
+
+# Ocultar archivos de datos con información real de vuelos
+*.csv
+
+# Ocultar archivos de logs
+*.log
+
+# Ocultar archivos temporales de Python
+__pycache__/
+*.pyc
