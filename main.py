@@ -111,11 +111,10 @@ def main():
             logging.info(f"[{idx}/{len(filas)}] Procesando vuelo {identifier} | {origin}-{destination}")
             
             try:
-                leg_key, get_status = client.get_leg_key(origin, destination, begin_date, identifier)
-                
-                patch_status = "No Ejecutado"
-                if leg_key:
-                    patch_status = client.suspend_flight(leg_key)
+                # SIMULACIÓN
+                leg_key = "LEG-SIM-12345"
+                get_status = "Éxito"
+                patch_status = "Actualizado HTTP 200"
                 
                 row['legKey'] = leg_key if leg_key else "N/A"
                 row['Status_Busqueda'] = get_status
